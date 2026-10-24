@@ -1,0 +1,10 @@
+# Modified for v1.0.0: normalized public identifiers and technical documentation.
+# Offline mission source: compile before installation. No runtime downlink.
+[mission]
+task = "threshold-report"
+sensor = "scalar"
+threshold = 6
+sample_period = 1
+report_period = 1
+max_reports = 3
+seed = 0

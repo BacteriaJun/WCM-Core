@@ -1,0 +1,52 @@
+# Modified for v1.0.0: normalized public identifiers and technical documentation.
+schema = 1
+name = "reference_core"
+frame_bits = 8
+
+[[witness]]
+name = "mission"
+max_age_us = 2000
+
+[[witness]]
+name = "energy"
+max_age_us = 2000
+
+[geometry]
+max_span_um = 1000
+capacitor_area_fraction_ppm = 200000
+
+[power]
+capacitance_nF = 1500
+v_high_mV = 3000
+v_cutoff_mV = 2000
+efficiency_ppm = 700000
+reserve_nJ = 300
+
+[optical]
+symbol_period_us = 100
+effect_latency_us = 100
+startup_energy_nJ = 40
+per_symbol_energy_nJ = 30
+
+[aerodynamics]
+effect_latency_us = 1200
+actuation_energy_nJ = 1500
+
+[transactions.tx]
+enabled = true
+worst_case_nJ = 800
+deadline_us = 1500
+
+[transactions.aero]
+enabled = true
+worst_case_nJ = 1500
+deadline_us = 1800
+
+[trust_boundary]
+independent_time_watchdog = true
+qualified_witness_liveness = true
+capture_after_cutover = true
+qualified_settlement = true
+qualified_energy_sampling = true
+qualified_local_policy_authorization = true
+supply_brownout_interlock = true

@@ -1,0 +1,12 @@
+# Generated build outputs and Python caches
+build/
+dist/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+*.so
+*.o
+*.vvp
+*.vcd
+*.swp
+.env

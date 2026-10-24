@@ -1,0 +1,15 @@
+{
+  "kind": "reviewed-source-digests",
+  "limitations": "Source identity for model review; implementation correspondence and hardware validation are tracked separately",
+  "sha256": {
+    "hardware/film/rtl/wcm_mission64_engine.v": "ca7360d7229276b23ad457057bece4e1e5ad43f2b584df93672f62adaaba2920",
+    "hardware/film/rtl/wcm_mission64_endpoint.v": "aa792b26c3cb4f69c49d30d903d1cf4c03ca8efb5238c920efd85a19aa391521",
+    "toolchain/hc/rtl/core_template.v": "1521c7b2f6dc5c3327ab01c9a50ec8fda6e5d9ed6bc331d7e638471438e759d5",
+    "toolchain/mission/missionc.py": "1bffd7369513adc78073d1308cd907c81e36322c11970b9518a050f384424707",
+    "system/mission/wcm_mission64.c": "156f6602361143fe4e7a70568f96d176684b51c3a03abbbb0d45ec9690b21ee3",
+    "hardware/film/model/mission64_reference.py": "20378c65468dfd96a32533575049d60c7fa43f3282ce6a4e5065a445e92ed6cf",
+    "devices/virtual-node/virtual_device.c": "de2deeedef360bfe9f7c614459be4a1b22f0b47d9a62bddbfee292d39151dbf3",
+    "simulation/wcm_scenario.c": "eba6999a77f8db3b6179cd83099ee8e8f1e7fe362d57da64e8ce068af1bef3ec",
+    "verification/formal/prove.py": "c8693d5bb9dcddda91551d81ac1a31a3aee728ab708e020aba093a1d56af1380"
+  }
+}

@@ -1,0 +1,25 @@
+# Modified for v1.0.0: normalized public identifiers and technical documentation.
+schema = 1
+id = "film-reference"
+display_name = "Experimental fixed-function RTL target"
+kind = "fixed-film-logic"
+status = "research-only"
+deployable = false
+physical_hardware = false
+image_kind = "verilog-rtl"
+control_version = "film-p1/hc-p2"
+optical_frame_bits = 8
+[requirements]
+qualified_pdk = false
+qualified_power_frontend = false
+qualified_optical_phy = false
+qualified_actuator_feedback = false
+rtl_simulated = false
+
+[mission]
+format = "WCM-Mission-64-v1"
+preload_loader_in_rtl = true
+loader_interface = "serial-msb-64"
+loader_qualification = "research-only"
+uplink = "optical-reflect-only"
+downlink = false

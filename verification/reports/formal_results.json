@@ -1,0 +1,297 @@
+{
+  "release": "v1.0.0",
+  "kind": "finite-SMT-specification-proof",
+  "important_limit": "Symbolic proofs cover specified Mission-64 predicates and synchronous abstract policy transition only; no RTL sequential equivalence or physical hardware qualification",
+  "solver": "Z3",
+  "passed": true,
+  "obligations": [
+    {
+      "name": "CRC_RTL_BYTEWISE_EQUIV",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 1.526,
+      "query_sha256": "162a9a01fe6477f7924213d28c82b53cb56b298c7ecfa7c1ca1e72a8d85c4b05",
+      "model_excerpt": null
+    },
+    {
+      "name": "MISSION64_ACCEPTANCE_EQUIV",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.373,
+      "query_sha256": "6f6998576471f893bbd8a2793b526df11b4a38109782e68524b4d96c073e4809",
+      "model_excerpt": null
+    },
+    {
+      "name": "MISSION64_ANY_SINGLE_BIT_DETECTED",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.622,
+      "query_sha256": "50907230924a2a98d688c2e3c75c8acbc1ea186388d8a5f811a3fefc5a4f61fe",
+      "model_excerpt": null
+    },
+    {
+      "name": "POLICY_INIT",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "b3b233490a60c5ea6a252f2f4dbdea5541521954b8841fc1e6b4727a52bc9d0e",
+      "model_excerpt": null
+    },
+    {
+      "name": "POLICY_INDUCTIVE",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.004,
+      "query_sha256": "826da2772b193a3225f858750b1a968e915b289d19cdf62d2b59d9a02cb01366",
+      "model_excerpt": null
+    },
+    {
+      "name": "NO_INVALID_REQUEST",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "84532043116860bc4241b812b93c72a19d7a81be6265c4bc0bc13614ef8f708b",
+      "model_excerpt": null
+    },
+    {
+      "name": "REPORT_ONLY_AFTER_COMMIT",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "9d911edc7074ca9d40ed41292301d5da6089614303c3f0a0d1737f935fc5ba7e",
+      "model_excerpt": null
+    },
+    {
+      "name": "REPORT_NOT_IN_NONINFLIGHT",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "2a513884fe683f2afbea3d1b4fff8797b3d6bc237acabcd0fb5ce69218902e79",
+      "model_excerpt": null
+    },
+    {
+      "name": "REPORT_NEVER_EXCEEDS_MAX",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "98360bf29641c0f529c9353404c4eecbf2ffc16f20d7978444b16508e5f795b6",
+      "model_excerpt": null
+    },
+    {
+      "name": "ABORT_NEVER_INCREMENTS",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "9a06e859a51211cb15b564566cabbe1c003199cc00101341df2f204d0084909f",
+      "model_excerpt": null
+    },
+    {
+      "name": "FAILURE_STICKY",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "29af7d7d65f33feb09a467498511b422686d1bd2d124ec72ce3a8eef883283a2",
+      "model_excerpt": null
+    },
+    {
+      "name": "PASSIVE_STICKY_UNLESS_FAULT",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "95f1fbfd96ed374bddd26a5ea9877972c4c9a750948f385dd812687df913ed07",
+      "model_excerpt": null
+    },
+    {
+      "name": "PASSIVE_FAULT_TRANSITIONS_TO_FAILED",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "7b081330428411993edd612d1a61f52251d2412063db4f87189c923fe2190592",
+      "model_excerpt": null
+    },
+    {
+      "name": "RESET_CLEARS_STATE",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "95d83c78afb10fac37f2fb9ccd78d37a3c973f2e86e9de939540b46d5755e869",
+      "model_excerpt": null
+    },
+    {
+      "name": "BAD_MISSION_NO_REQUEST",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "a3a636671fffcdc2e3a131b59d9185cfb7ad1e6346d9ab039b71c5f993feb595",
+      "model_excerpt": null
+    },
+    {
+      "name": "NO_COUNT_ON_QUARANTINE_ALONE",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "1ed5409858274b0155eb9622fdeab7b3efd9ecdce03e6e89841836b0d1954a12",
+      "model_excerpt": null
+    },
+    {
+      "name": "NO_COUNT_ON_DIRTY_EVIDENCE",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "992bb4dc50be90152cd0744c03dab18f2fbcf26638c3ce194f65890b692b1382",
+      "model_excerpt": null
+    },
+    {
+      "name": "NO_COUNT_ON_WORLD_BREAK",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "d0aef1d05025cc841773c4b2f931ac1395f03cb2806a1208c7b390c907584e0f",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_INIT",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "faf9bc33f3fe7bfd576876d675a4765da922a229185094c917a79d8fd027b45d",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_INDUCTIVE",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "a144c2c8f4c1ffde8c25df728f5b7f0f981b5bec54e2bdeb6fdda29505bb93ca",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_NO_VERIFY_BEFORE_64_BITS",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "049dd8d8f9ef540c0e73469a4b474951cc74ca937cef12309be4564ee6896433",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_NO_COUNT_WRAP",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "f548c4af60d3f78544cadf6906f227ac4e5c2313baa7724fdfd3dac50f5bc6a8",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_BIT_ABSENCE_HOLDS",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "c4495460c32d67bf271f94c7bd06a811eaa6c463446358c60267b907f713005f",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_BAD_STICKY",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "22ab3f89cf15c6b91044551d100b40ac6ab8340d15387813e21b0918fe0035e4",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_EXTRA_BIT_INVALIDATES",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "e25ff5b2a0732664aabf07842051833b4ccddc28df840dde9e0f9604b142dfbf",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_CRC_FAIL_NEVER_ENABLES",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "8fe3a215bd6cb3ad3d0a31d5618245b1511f2ae02843f7853abbe4b125578d9e",
+      "model_excerpt": null
+    },
+    {
+      "name": "LOADER_RESET_CLEARS",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "9e15ede86946eb88ee472b25b7fdabd7f552efd4552aab27c61b9395fe785127",
+      "model_excerpt": null
+    },
+    {
+      "name": "TIME_OVERFLOW_TO_FAILED",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "073e2984f13bd8aa856029451ee51281a193bab205e8acde07b417340412d317",
+      "model_excerpt": null
+    },
+    {
+      "name": "TIME_NO_WRAP_AT_LIMIT",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "6d5ff5e0aede2e0a836148370aaf2777266cbef34bfdda6c81109bcba929a6a9",
+      "model_excerpt": null
+    },
+    {
+      "name": "TIME_OVERFLOW_NO_REPORT",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "d39cb9eb54e6dae775ac18657f2d5535ef90a6585d13d2dded49b15af943ce60",
+      "model_excerpt": null
+    },
+    {
+      "name": "TIME_RESET_ZERO",
+      "solver_result": "unsat",
+      "expected": "unsat",
+      "pass": true,
+      "duration_s": 0.001,
+      "query_sha256": "3b6cbe5115d6ad7c90207d0c45986837c1335cf9094ff08de88b5f3308d399ec",
+      "model_excerpt": null
+    },
+    {
+      "name": "MUTATION_MISSING_SETTLEMENT_IS_DETECTED",
+      "solver_result": "sat",
+      "expected": "sat",
+      "pass": true,
+      "duration_s": 0.002,
+      "query_sha256": "4268b10208317cf64d0c1578c15da00edc1f6bb81a4013f36e4ec304d01f1a44",
+      "model_excerpt": "sat\n(\n  (define-fun abort () Bool\n    false)\n  (define-fun accept () Bool\n    true)\n  (define-fun invalid () Bool\n    false)\n  (define-fun world_break () Bool\n    true)\n  (define-fun state () (_ BitVec 3)\n    #b011)\n  (define-fun reports_next () (_ BitVec 6)\n    #b011000)\n  (define-fun maximum () (_ BitVec 6)\n    #b111000)\n  (define-fun settled_ok () Bool\n    true)\n  (define-fun settle_after_quarantine () Bool\n    true)\n  (define-fun settle_pulse () Bool\n    true)\n  (define-fun phy_settled_this_frame () Bool\n    true)\n  (define-fun quarantined () Bool\n    true)\n  (define-fun full_frame_closed () Bool\n    true)\n  (define-fun started () Bool\n    true)\n  (define-fun dirty () Bool\n    false)\n  (define-fun reports () (_ BitVec 6)\n    #b010111)\n  (define-fun reset_ok () Bool\n    true)\n  (define-fun verified () Bool\n    false)\n  (define-fun due () Bool\n    false)\n  (define-fun state_next () (_ BitVec 3)\n    #b001)\n  (define-fun commit () Bool\n    (and started\n     full_frame_closed\n     quarantined\n     phy_settled_this_frame\n     settle_pulse\n     settle_after_quarantine\n     settled_ok\n     reset_ok\n     (not dirty)\n     (not world_break)))\n  (define-fun complete () Bool\n    accept)\n  (define-fun count_step () Bool\n    (and reset_ok (not (or invalid abort)) (= state #b011) accept))\n  (define-fun inc () (_ BitVec 6)\n    (bvadd reports #b000001))\n  (define-fun inv_next () Bool\n    (let ((a!1 (or (not (or (= state_next #b001)\n                        (= state_next #b010)\n                        (= state_next #b011)))\n               (bvult reports_next maximum))))\n  (and (or (= state_next #b000)\n           (= state_next #b001)\n           (= state_next #b010)\n           (= state_next #b011)\n           (= state_next #b100)\n           (= state_next #b101))\n       (not (= maximum #b000000))\n       (bvule reports_next maximum)\n       a!1\n       (or (not (= state_next #b000)) (= reports_next #b000000))\n       (or (not (= state_next #b100)) (= reports_next maximum)))))\n  (define-fun request () Bool\n    (and reset_ok verified (not invalid) (= state #b010)))\n  (define-fun inv () Bool\n    (let ((a!1 (or (not (or (= state #b001) (= state #b010) (= state #b011)))\n               (bvul"
+    }
+  ]
+}

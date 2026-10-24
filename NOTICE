@@ -1,0 +1,8 @@
+WCM-Core 1.0.0 Reference Control System
+
+Copyright retained by the respective source contributors. Apache-2.0 LICENSE
+applies to the project components covered by that notice.
+
+This distribution includes C17 endpoint control, fixed-function Verilog,
+offline task tools and a virtual-device harness. Modified public identifiers
+and documentation are recorded in CHANGELOG.md.

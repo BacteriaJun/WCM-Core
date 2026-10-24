@@ -1,0 +1,35 @@
+name: WCM-Core unified integration
+on:
+  push:
+  pull_request:
+jobs:
+  build-and-virtual-boot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install host test dependency
+        run: python3 -m pip install 'sympy>=1.12,<2'
+      - name: Install required offline verification tools
+        run: sudo apt-get update && sudo apt-get install -y iverilog yosys z3 libz3-4
+      - name: Run integrated tests and symbolic proof suite
+        run: make test
+      - name: Execute Film mission loader RTL bench and elaborate complete endpoint
+        run: make film-rtl-test
+      - name: Run HC generated RTL trace and asynchronous frontend test
+        run: make hc-rtl-test
+      - name: Synthesize Film digital RTL using generic Yosys cells
+        run: make film-synth
+      - name: Audit conceptual distribution files
+        run: make release-audit
+      - name: Build, install and boot virtual image; generate film research RTL
+        run: make preview
+      - name: Validate physical install refusal
+        run: |
+          if python3 tools/wcmctl.py install --bundle dist/film-reference --device-root dist/wcm-film-physical; then
+            echo 'ERROR: unqualified physical install was accepted' >&2
+            exit 1
+          fi
+          echo 'Unqualified device correctly refused'

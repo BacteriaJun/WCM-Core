@@ -1,0 +1,21 @@
+# Modified for v1.0.0: normalized public identifiers and technical documentation.
+schema = 1
+id = "virtual-node"
+display_name = "Virtual reference endpoint"
+kind = "virtual-host"
+status = "simulated"
+deployable = true
+physical_hardware = false
+image_kind = "host-executable"
+control_version = "cell-r4"
+optical_frame_bits = 32
+[requirements]
+host_os = "Linux"
+compiler = "gcc or clang"
+
+[mission]
+format = "WCM-Mission-64-v1"
+provisioning = "offline-only"
+uplink = "optical-reflect-only"
+downlink = false
+ack = false

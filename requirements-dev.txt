@@ -1,0 +1,2 @@
+sympy>=1.12,<2  # HC algebraic cone SAT
+# Native libz3.so or z3 executable required separately for SMT proof queries
