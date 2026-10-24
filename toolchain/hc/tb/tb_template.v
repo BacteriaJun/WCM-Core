@@ -47,8 +47,8 @@ module tb_wcm_film_p1;
         @(negedge clk); tx_energy_ok=1; req_aero=1;
         tick();
         if (state_debug != 3'd2 || tx_start || aero_start) $fatal(1,"dual request authorized");
-        @(negedge clk); req_aero=0;
-        @(negedge clk); req_tx=1; tick();
+        // Check the start pulse on the edge that grants the request.
+        @(negedge clk); req_aero=0; req_tx=1; tick();
         if (!tx_start || !optical_reflect) $fatal(1,"first bit missing");
         @(negedge clk); req_tx=0;
         for (i=0;i<8;i=i+1) begin
