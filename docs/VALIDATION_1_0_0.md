@@ -40,15 +40,29 @@ For the formal rerun, a validation-only library-location adapter loaded the
 installed native Z3 library; the candidate generated and evaluated its own
 unchanged SMT queries. The report contains the actual solver results.
 
-## Not executed on this candidate
+## Hosted Linux validation
 
-- The complete Linux `make test` and virtual image build/install/boot workflow.
-- The eight Linux installer-based lifecycle tests and three other Python
-  cases requiring the Linux image builder.
-- Icarus Verilog simulation, complete endpoint HDL execution, Yosys synthesis,
-  sequential RTL equivalence, or SVA properties.
-- Physical storage, sensors, energy frontends, optical channel or actuator tests.
-- Hosted GitHub Actions. The workflow is supplied for subsequent execution.
+[GitHub Actions run 40050520847](https://github.com/BacteriaJun/WCM-Core/actions/runs/40050520847)
+passed on implementation commit `90b967c5bf76b3686ff6c0226fb27e057e023ae1`.
 
-Formal coverage and target-frontend assumptions are described in
-`docs/FORMAL_VERIFICATION.md`.
+| Check | Result |
+|---|---|
+| Full Linux `make test` | Passed, including 38 top-level and 16 HC Python tests |
+| Finite SMT suite | 31 UNSAT; 1 expected SAT mutation |
+| Film RTL | Serial-loader simulation and complete endpoint elaboration passed |
+| HC RTL | Directed bench, 780-cycle reference trace and asynchronous frontend bench passed |
+| Generic Yosys synthesis | Complete endpoint synthesis passed |
+| Release evidence audit | Passed |
+| Virtual image workflow | Build, install and boot passed |
+| Physical-target install guard | Film source target correctly refused installation |
+
+HDL validation included two identifier portability corrections and an
+acceptance-edge timing correction in the directed HC testbench. All 17
+failure assertions in that bench were retained.
+
+## Hardware integration
+
+Target-specific frontend, storage, optical and actuator qualification is
+pending. Sequential RTL equivalence and physical hardware testing remain
+separate integration tasks. Formal coverage and frontend assumptions are
+specified in `docs/FORMAL_VERIFICATION.md`.
