@@ -151,7 +151,7 @@ def generate(data, source_path, outdir):
 // Inputs follow the timing, evidence and settlement frontend requirements
 // in spec/WCM-SYSTEM-CONTRACT.md.
 module {top} (\n{render_ports(bits)}\n);
-    wcm_hc_fixed_core #(.FRAME_BITS({bits})) instance (\n{',\n'.join(connections)}\n    );
+    wcm_hc_fixed_core #(.FRAME_BITS({bits})) core_instance (\n{',\n'.join(connections)}\n    );
 endmodule
 '''
     output=(outdir/(top+'.v'))
