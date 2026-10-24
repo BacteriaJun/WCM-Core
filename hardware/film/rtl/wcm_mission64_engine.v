@@ -48,7 +48,7 @@ module wcm_mission64_engine (
         end
     endfunction
     wire [63:0] candidate={bits[62:0],nvm_bit};
-    wire [3:0] task=bits[59:56];
+    wire [3:0] mission_task=bits[59:56];
     wire [5:0] threshold=bits[51:46];
     wire [5:0] sample_period=bits[45:40];
     wire [5:0] report_period=bits[39:34];
@@ -114,7 +114,7 @@ module wcm_mission64_engine (
                     sample_phase<=6'd0;
                     // stale/missing physical sensor evidence cannot authorize work
                     sampled<=sensor_valid;
-                    if(sensor_valid) sensor_met <= (task==4'd2) ||
+                    if(sensor_valid) sensor_met <= (mission_task==4'd2) ||
                                                          (sensor_value >= threshold_scaled);
                     else sensor_met<=1'b0;
                 end else sample_phase<=sample_phase+6'd1;
